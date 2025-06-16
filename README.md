@@ -1,12 +1,39 @@
-# React + Vite
+Notes App – aplikacja do notatek z Firebase
+Projekt stworzony w ramach zajęć na studiach. Aplikacja webowa zbudowana w React (Vite), która umożliwia użytkownikom tworzenie i zarządzanie prywatnymi notatkami. Do obsługi logowania i bazy danych wykorzystałam Firebase (Authentication + Firestore).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Co potrafi aplikacja?
+Rejestracja konta i logowanie (z prostą walidacją)
 
-Currently, two official plugins are available:
+Wyświetlanie listy notatek użytkownika (ważne notatki są wyróżnione)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dodawanie, edytowanie i usuwanie notatek
 
-## Expanding the ESLint configuration
+Przeglądanie pełnej treści notatki na osobnej stronie
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Filtrowanie notatek po kategorii, dacie i statusie „ważna”
+
+Sortowanie notatek według daty
+
+🧾 Jak wygląda notatka?
+Każda notatka zawiera:
+
+tytuł,
+
+treść,
+
+datę utworzenia,
+
+informację, czy jest oznaczona jako ważna,
+
+kategorię.
+
+🔧 Technologie
+React (Vite)
+
+Firebase Authentication – obsługa użytkowników
+
+Cloud Firestore – przechowywanie danych
+
+React Router – podstrony
+
+![fotka1](presentation/1.png)
