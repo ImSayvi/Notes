@@ -37,3 +37,10 @@ Cloud Firestore – przechowywanie danych
 React Router – podstrony
 
 ![fotka1](presentation/1.png)
+![fotka2](presentation/2.png)
+![fotka3](presentation/3.png)
+![fotka4](presentation/4.png)
+![fotka5](presentation/5.png)
+![fotka6](presentation/6.png)
+![fotka7](presentation/7.png)
+z
