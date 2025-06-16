@@ -1,0 +1,140 @@
+/* Kontener formularza dodawania notatki */
+.add-note-container {
+    width: 95vw;
+    max-width: 600px;
+    background: #FFF2EB;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    margin: 2rem auto;
+    color: #333;
+}
+
+/* Nagłówek formularza */
+.add-note-container h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Formularz */
+.add-note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Etykiety pól formularza */
+.add-note-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Pola input i textarea */
+.add-note-form input[type="text"],
+.add-note-form textarea {
+    margin-top: 0.3rem;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #f7a278;
+    border-radius: 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.add-note-form input[type="text"]:focus,
+.add-note-form textarea:focus {
+    outline: none;
+    border-color: #c26666;
+    box-shadow: 0 0 8px rgba(194, 102, 102, 0.4);
+}
+
+/* Textarea dostosowana do wysokości */
+.add-note-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkbox i label */
+.add-note-form label>input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.7rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+/* Błąd formularza */
+.error {
+    color: #d87b5a;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Przycisk dodawania notatki */
+.add-note-form button {
+    background: #FFD6BA;
+    color: #333;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    width: 12rem;
+}
+
+.add-note-form button:hover {
+    background: #FFC2A1;
+    transform: scale(1.05);
+}
+
+.add-note-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+}
+
+.add-note-form .checkbox-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .add-note-container {
+        width: 90vw;
+        padding: 1.5rem 1.8rem;
+        margin: 1.5rem auto;
+    }
+
+    .add-note-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .add-note-form button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

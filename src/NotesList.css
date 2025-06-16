@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding-bottom: 60px;
+    /* wysokość stopki + trochę zapasu */
+}
+
+
+/* Kontener listy notatek */
+.notes-list {
+    width: 95vw;
+    max-width: none;
+    background: #FFF2EB;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #333;
+    margin: 0 auto;
+    /* wyśrodkowanie */
+}
+
+
+/* Nagłówek listy */
+.notes-list h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/* Przycisk dodawania notatki */
+.add-note-button {
+    background: #FFD6BA;
+    color: #333;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 11rem;
+    align-self: center;
+}
+
+.add-note-button:hover {
+    background: #FFC2A1;
+    transform: scale(1.05);
+}
+
+/* Lista notatek */
+.notes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+/* Pojedyncza notatka */
+.notes li {
+    background: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    transition: box-shadow 0.2s ease;
+}
+
+.notes li:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Wyróżnienie ważnej notatki */
+.notes li.important {
+    border-left: 5px solid #f7a278;
+}
+
+/* Link w notatce */
+.notes li a {
+    text-decoration: none;
+    color: #c26666;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notes li a:hover {
+    text-decoration: underline;
+}
+
+/* Przycisk usuwania notatki */
+.notes li button {
+    background: #f7a278;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
+.notes li button:hover {
+    background: #d87b5a;
+}
+
+/* Komunikat gdy brak notatek */
+.notes-list p {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .notes-list {
+        padding: 1rem 1.5rem;
+        max-width: 100%;
+    }
+
+    .notes-list h2 {
+        font-size: 1.5rem;
+    }
+
+    .add-note-button {
+        width: 120px;
+        font-size: 1rem;
+    }
+
+    .notes li {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .notes li button {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+        margin-left: 0.5rem;
+    }
+}
+
+
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Input tekstowy i daty */
+.filters input[type="text"],
+.filters input[type="datetime-local"] {
+    padding: 0.5rem 0.75rem;
+    border: 1.8px solid #f7a278;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    width: 200px;
+    transition: border-color 0.2s ease;
+}
+
+.filters input[type="text"]:focus,
+.filters input[type="datetime-local"]:focus {
+    border-color: #c26666;
+    outline: none;
+}
+
+/* Label z inputem daty – tak, by label i input były obok */
+.filters label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Przycisk wyczyszczenia filtrów */
+.filters button {
+    background: #f7a278;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    height: fit-content;
+    align-self: flex-end;
+}
+
+.filters button:hover {
+    background: #d87b5a;
+}
+
+/* Na mniejszych ekranach (mobile) ustawiamy układ kolumnowy */
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters input[type="text"],
+    .filters input[type="datetime-local"] {
+        width: 100%;
+    }
+
+    .filters button {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .filters label {
+        flex-direction: column;
+    }
+}
+
+.important-note-card {
+    background: #fff4e6;
+    border-left: 6px solid #f7a278;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 800px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    color: #a33f2f;
+}
+
+.important-note-card h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.important-note-card h4 {
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.important-note-card .note-category,
+.important-note-card .note-date {
+    font-size: 0.9rem;
+    color: #7a4e3b;
+    margin-bottom: 0.25rem;
+}
+
+.important-note-card .note-content {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-top: 0.75rem;
+    color: #6e3b2e;
+}
+
+.important-note-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.important-note-navigation button {
+    padding: 0.5rem 1rem;
+    background-color: #FFD6BA;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    /* na dole ekranu */
+    left: 0;
+    width: 100vw;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    text-align: right;
+    box-sizing: border-box;
+    z-index: 1000;
+
+}
+
+
+
+.footer button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.footer button:hover {
+    background-color: #c0392b;
+}
+
+.filters>label>select {
+    padding: 0.5rem 0.75rem;
+    border: 1.8px solid #f7a278;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filters>label>select:focus {
+    border-color: #c26666;
+    outline: none;
+}

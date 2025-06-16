@@ -1,0 +1,35 @@
+.edit-note {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-note form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.edit-note label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.edit-note input[type="text"],
+.edit-note textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.edit-note button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
