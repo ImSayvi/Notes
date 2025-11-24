@@ -1,7 +1,7 @@
 Notes App – aplikacja do notatek z Firebase
-Projekt stworzony w ramach zajęć na studiach. Aplikacja webowa zbudowana w React (Vite), która umożliwia użytkownikom tworzenie i zarządzanie prywatnymi notatkami. Do obsługi logowania i bazy danych wykorzystałam Firebase (Authentication + Firestore).
+Projekt stworzony w ramach zajęć na studiach. Aplikacja webowa zbudowana w React (Vite), która umożliwia użytkownikom tworzenie i zarządzanie prywatnymi notatkami. Do obsługi logowania i bazy danych wykorzystałam Firebase (Authentication + Firestore). Aplikacja tworzona trybem 'vibe coding'
 
-✨ Co potrafi aplikacja?
+Co potrafi aplikacja?
 Rejestracja konta i logowanie (z prostą walidacją)
 
 Wyświetlanie listy notatek użytkownika (ważne notatki są wyróżnione)
